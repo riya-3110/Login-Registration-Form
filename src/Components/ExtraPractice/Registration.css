@@ -1,0 +1,136 @@
+.form-container {
+  width: 500px;
+  border: 1px solid hsla(37, 65%, 44%, 0.556);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  background: #f0ca73;
+  padding: 10px 45px;
+  border-radius: 5px;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.3rem;
+}
+
+.form-container .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-container .container .input-data {
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+  height: 30px;
+}
+
+.form-container .container .input-data label {
+  font-size: 1rem;
+}
+
+.form-container .container .input-data input,
+select,
+textarea {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.form-container .container .error-container {
+  text-align: end;
+}
+
+.form-container .container .input-data input:focus {
+  border: 1px solid #1b263b;
+}
+
+.form-container .container .input-data .radio-data {
+  display: flex;
+  align-items: center;
+}
+
+.form-container .container .input-data .radio-data .radio1,
+.radio2 {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.form-container .container .input-data .radio-data .radio1 input,
+.radio2 input {
+  margin-right: 5px;
+}
+
+.form-container .container .input-data textarea {
+  height: 50px;
+}
+
+.form-container .container .upload-file {
+  margin-top: 30px;
+}
+
+.form-container .container .input-data .file-container {
+  /* margin-right: -80px; */
+  margin-right: -10px;
+  margin-left: 0px;
+}
+
+.form-container .btn-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-container .btn-container button {
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #134074;
+  color: #fff;
+}
+
+.form-container .btn-container button:hover {
+  background: #1d518c;
+}
+
+/* custom file button css */
+.custom-file-button {
+  background-color: #c69928;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #cca43b;
+}
+
+.file-name {
+  margin: 6px 0;
+  font-style: italic;
+  color: #333;
+}
+/* ------------------------------------------- */
+
+.form-container p {
+  margin-top: 10px;
+  text-align: center;
+  color: #d82727;
+}
+.form-container p a {
+  color: #d82727;
+  text-decoration: underline;
+  margin-left: 5px;
+  font-weight: 500;
+}
