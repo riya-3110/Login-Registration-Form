@@ -4,19 +4,19 @@ import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({
-  fname: Yup.string()
+  fName: Yup.string()
     .required("First Name is required")
     .min(2, "First Name must be at least 2 characters long"),
 
-  mname: Yup.string()
+  mName: Yup.string()
     .required("Middle name is required")
     .min(2, "Middle Name must be at least 2 characters long"),
 
-  lname: Yup.string()
+  lName: Yup.string()
     .required("Last name is required")
     .min(2, "Last Name must be at least 2 characters long"),
 
-  bdate: Yup.date()
+  bDate: Yup.date()
     .required("Date of birth is required")
     .max(new Date(), "Date of birth cannot be in the future"),
 
@@ -53,10 +53,10 @@ export const Registration = () => {
 
   // reset data
   const initialState = {
-    fname: "",
-    mname: "",
-    lname: "",
-    bdate: "",
+    fName: "",
+    mName: "",
+    lName: "",
+    bDate: "",
     email: "",
     number: "",
     gender: "",
@@ -70,14 +70,6 @@ export const Registration = () => {
   function handleInputs(e) {
     setInput({ ...input, [e.target.name]: e.target.value });
   }
-
-  //   const [fname, setFname] = useState("");
-  //   const [mname, setMname] = useState("");
-
-  //   function handleFname(e) {
-  //     setFname(e.target.value);
-  //   }
-  //   localStorage.setItem("Register", JSON.stringify({fname,mname,lname}));
 
   // store data in local storage
   async function handleData(e) {
@@ -118,8 +110,8 @@ export const Registration = () => {
             <label>First Name</label>
             <input
               type="text"
-              name="fname"
-              value={input.fname}
+              name="fName"
+              value={input.fName}
               onChange={handleInputs}
               className="text-input"
               autoComplete="off"
@@ -127,55 +119,55 @@ export const Registration = () => {
           </div>
 
           <div className="error-container">
-            {errors.fname && (
-              <span style={{ color: "red", fontSize: 12 }}>{errors.fname}</span>
+            {errors.fName && (
+              <span style={{ color: "red", fontSize: 12 }}>{errors.fName}</span>
             )}
           </div>
           <div className="input-data">
             <label>Middle Name</label>
             <input
               type="text"
-              name="mname"
-              value={input.mname}
+              name="mName"
+              value={input.mName}
               onChange={handleInputs}
               className="text-input"
               autoComplete="off"
             />
           </div>
           <div className="error-container">
-            {errors.mname && (
-              <span style={{ color: "red", fontSize: 12 }}>{errors.mname}</span>
+            {errors.mName && (
+              <span style={{ color: "red", fontSize: 12 }}>{errors.mName}</span>
             )}
           </div>
           <div className="input-data">
             <label>Last Name</label>
             <input
               type="text"
-              name="lname"
-              value={input.lname}
+              name="lName"
+              value={input.lName}
               onChange={handleInputs}
               className="text-input"
               autoComplete="off"
             />
           </div>
           <div className="error-container">
-            {errors.lname && (
-              <span style={{ color: "red", fontSize: 12 }}>{errors.lname}</span>
+            {errors.lName && (
+              <span style={{ color: "red", fontSize: 12 }}>{errors.lName}</span>
             )}
           </div>
           <div className="input-data">
             <label>Date of Birth</label>
             <input
               type="date"
-              name="bdate"
-              value={input.bdate}
+              name="bDate"
+              value={input.bDate}
               onChange={handleInputs}
               className="dob-input"
             />
           </div>
           <div className="error-container">
-            {errors.bdate && (
-              <span style={{ color: "red", fontSize: 12 }}>{errors.bdate}</span>
+            {errors.bDate && (
+              <span style={{ color: "red", fontSize: 12 }}>{errors.bDate}</span>
             )}
           </div>
           <div className="input-data">
@@ -267,13 +259,12 @@ export const Registration = () => {
               </span>
             )}
           </div>
-          <div className="input-data">
+          <div className="input-data address-input ">
             <label>Address</label>
             <textarea
               name="address"
               value={input.address}
               onChange={handleInputs}
-              className="address-input"
               autoComplete="off"
             />
           </div>

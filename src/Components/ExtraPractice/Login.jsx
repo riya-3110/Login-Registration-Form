@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Apply.css";
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
-export const Apply = () => {
+export const Login = () => {
   const navigate = useNavigate();
 
   const [otpEnabled, setOtpEnabled] = useState(false);
@@ -59,7 +59,7 @@ export const Apply = () => {
         console.log("OTP Enabled");
         setOtpEnabled(true); // Enable OTP field
       } else {
-        console.log("Data mismatch, OTP not enabled");
+        alert("Data mismatch, OTP not enabled");
       }
     } catch (error) {
       if (error.inner && error.inner.length > 0) {
@@ -110,7 +110,7 @@ export const Apply = () => {
         <div className="img-container"></div>
 
         <form className="info-container">
-          <h2>Sign In</h2>
+          <h2>Log In</h2>
           <div className="input-container">
             <label>Enter Email</label>
             <input

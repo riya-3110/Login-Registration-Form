@@ -1,17 +1,18 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Apply, Apply2 } from "./Components/ExtraPractice/Apply";
+import { Login } from "./Components/ExtraPractice/Login";
 import { Registration } from "./Components/ExtraPractice/Registration";
-import { Homes } from "./Components/ExtraPractice/Homes";
+import { LoginSignup } from "./Components/LoginSignup/LoginSignup";
+import { Home } from "./Components/ExtraPractice/Home";
 
 function App() {
   return (
     <div>
-      {/* <Apply2 /> */}
+      {/* <LoginSignup /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Apply />} />
-          <Route path="/homes" element={<Homes />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Registration />} />
         </Routes>
       </BrowserRouter>
