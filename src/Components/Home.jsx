@@ -5,6 +5,7 @@ export const Home = () => {
     <div>
       <h1 style={{ color: "white" }}>hello Home</h1>
       <h1>hello Home</h1>
+      <a href="/">Logout</a>
     </div>
   );
 };
